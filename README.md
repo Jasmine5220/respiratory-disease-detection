@@ -1,4 +1,4 @@
-# Detecting Respiratry Diseses with Chest X-Ray
+# Detecting Lung Diseases with Chest X-Ray
 
 This project applies deep learning to medical image processing, aiming to build an accurate model that identifies COVID-19 infection in radiology images. Using transfer learning with a Residual Network, fine-tuned the model on real chest X-ray images of COVID-19 cases, healthy lungs, viral pneumonia, and bacterial pneumonia. The model classifies chest X-ray images into one of four classes: Normal, Viral Pneumonia, Lung Opacity (bacterial pneumonia), and COVID-19. Evaluated on 400 real test subjects, it achieved an impressive 95% overall accuracy.
 
