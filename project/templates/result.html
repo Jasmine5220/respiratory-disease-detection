@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: #f5f6fa;
+        }
+
+        /* Main container styling */
+        .container {
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            color: #2c3e50;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 1em;
+            margin-bottom: 15px;
+            color: #7f8c8d;
+        }
+
+        /* Styling for button */
+        .back-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1em;
+        }
+
+        .back-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p><strong>Prediction Class:</strong> {{ prediction_class }}</p>
+        <p><strong>Accuracy:</strong> {{ accuracy }}</p>
+        <p><strong>Precision:</strong> {{ precision }}</p>
+        <p><strong>Recall:</strong> {{ recall }}</p>
+        <p><strong>F1-Score:</strong> {{ f1 }}</p>
+        <br>
+        <a href="/">
+            <button class="back-btn">Go Back and Upload Another Image</button>
+        </a>
+    </div>
+</body>
+</html>

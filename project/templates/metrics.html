@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Metrics</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: #f5f6fa;
+        }
+
+        /* Main container styling */
+        .container {
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            color: #2c3e50;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* Metrics list styling */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+        }
+
+        /* Styling for individual metric items */
+        .metric-item {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        /* Bold labels */
+        .metric-item span {
+            font-weight: bold;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Model Performance Metrics</h1>
+        <ul>
+            <li class="metric-item"><span>Accuracy:</span> {{ accuracy }}</li>
+            <li class="metric-item"><span>Precision:</span> {{ precision }}</li>
+            <li class="metric-item"><span>Recall:</span> {{ recall }}</li>
+            <li class="metric-item"><span>F1-Score:</span> {{ f1 }}</li>
+        </ul>
+    </div>
+</body>
+</html>

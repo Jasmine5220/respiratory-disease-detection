@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 X-Ray Analysis</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: #f5f6fa;
+        }
+
+        /* Main container styling */
+        .container {
+            background: #ffffff;
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            color: #2c3e50;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        /* Introductory paragraph styling */
+        p.description {
+            font-size: 1em;
+            margin-bottom: 25px;
+            color: #7f8c8d;
+        }
+
+        /* Hiding default file input */
+        input[type="file"] {
+            display: none; /* Hides the default file input button */
+        }
+
+        /* Custom "Choose File" button styling */
+        .custom-file-upload {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1em;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Hover effect for the custom button */
+        .custom-file-upload:hover {
+            background: #2980b9;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1em;
+        }
+
+        input[type="submit"]:hover {
+            background: #2980b9;
+        }
+
+        /* Button to view performance metrics */
+        .metrics-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            background: #9b59b6;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+
+        .metrics-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COVID-19 detection with chest X-ray</h1>
+        <p class="description">
+            Upload a chest X-ray image to analyze for COVID-19, Viral Pneumonia, or normal lung conditions. 
+            Our model will provide a quick diagnosis to assist with preliminary screening.
+        </p>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file" class="custom-file-upload">Choose File</label>
+            <input type="file" name="file" id="file" required>
+            <input type="submit" value="Analyze X-Ray">
+        </form>
+    </div>
+</body>
+</html>
